@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Od okularów do zarabiania tysięcy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: linear-gradient(90deg, #001f3f, #003366);
+    }
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .ebook-cover {
+      max-width: 90%;
+      height: auto;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 10px;
+    }
+    .description, .author, .price {
+      text-align: center;
+      margin: 1rem;
+      padding: 0 1rem;
+    }
+    .buy-buttons {
+      text-align: center;
+      margin: 2rem 1rem;
+    }
+    .buy-buttons a {
+      display: block;
+      background: #0070f3;
+      color: white;
+      padding: 1rem;
+      margin: 0.5rem auto;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+      max-width: 300px;
+    }
+    .buy-buttons a:hover {
+      background: #0051a2;
+    }
+    .counter, .newsletter, .blog {
+      margin: 2rem 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .counter span {
+      font-size: 2rem;
+      color: #00d1b2;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    form input[type="email"] {
+      width: 90%;
+      max-width: 400px;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+    form button {
+      padding: 0.5rem 1rem;
+      background: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .blog article {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #333;
+    }
+    @media(min-width: 600px) {
+      .buy-buttons a {
+        display: inline-block;
+      }
+      form {
+        flex-direction: row;
+        justify-content: center;
+      }
+      form input[type="email"] {
+        margin-right: 0.5rem;
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Od okularów do zarabiania tysięcy</h1>
+    <p>Jak sam zarobiłem 400 tysięcy złotych na dropshippingu w 2,5 roku</p>
+  </header>
+  <img class="ebook-cover" src="ebook-cover.jpg" alt="Okładka e-booka">
+  <div class="description">
+    <p>Napisane przez chłopaka, który w wieku 19 lat osiągnął sukces – zaczynał od okularów, dziś podąża za marzeniami</p>
+  </div>
+  <div class="price">
+    <strong>Cena: 40 zł</strong>
+  </div>
+  <div class="buy-buttons">
+    <a href="#">Kup przez PayPal</a>
+    <a href="#">Kup kartą / BLIK</a>
+  </div>
+  <div class="counter">
+    <p>Sprzedanych egzemplarzy: <span id="sales-count">0</span></p>
+  </div>
+  <div class="newsletter">
+    <h3>Zapisz się do newslettera</h3>
+    <form>
+      <input type="email" placeholder="Twój email">
+      <button type="submit">Zapisz się</button>
+    </form>
+  </div>
+  <div class="blog">
+    <h3>Aktualności</h3>
+    <article>
+      <h4>Start sprzedaży!</h4>
+      <p>Dziś ruszyła premiera mojego e-booka. Sprawdź jak zacząć zarabiać!</p>
+    </article>
+    <article>
+      <h4>Jak zrobiłem pierwszy tysiąc złotych</h4>
+      <p>W tym wpisie dzielę się moimi pierwszymi krokami w e-commerce.</p>
+    </article>
+  </div>
+  <script>
+    let sales = Math.floor(200 + Math.random() * 150);
+    document.getElementById("sales-count").textContent = sales;
+  </script>
+</body>
+</html>
